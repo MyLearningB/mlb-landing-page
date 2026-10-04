@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="myLB (My Learning Buddy) is an AI-powered learning companion that turns your notes into study sets, flashcards, mind maps, and interactive learning experiences. Use Feynman Mode, AI study plans, homework help, gamification, and co-op quests to learn smarter.">
+
+    <meta name="theme-color" content="#EF5B25">
+
+    <title>myLB | Your AI Learning Buddy</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" aria-label="Main Navigation">
+
+        <a href="index.html" class="logo" aria-label="myLB Home">
+            <img src="assets/logo.svg" alt="MyLB Logo" srcset="" width="25%">
+        </a>
+
+        <div class="nav-links">
+            <a href="#how-it-works">How It Works</a>
+            <a href="#features">Features</a>
+            <a href="#feynman">Feynman Mode</a>
+            <a href="#quests">Co-op Quests</a>
+            <a href="privacy-policy.html">Privacy</a>
+        </div>
+
+    </nav>
+
+
+    <main>
+
+        <!-- Hero Section -->
+        <header class="hero">
+
+            <div class="hero-content">
+
+                <h1>
+                    Master Any Subject with Your AI Learning Buddy
+                </h1>
+
+                <p>
+                    Turn your notes into interactive study sets, flashcards,
+                    and visual mind maps. Learn by teaching with Feynman Mode,
+                    get AI-powered feedback, and stay motivated with your
+                    Focus Pet and learning quests.
+                </p>
+
+                <!-- App Store Buttons -->
+                <div class="app-store-buttons">
+
+                    <a href="#cta"
+                       class="store-btn"
+                       aria-label="Download on the App Store">
+
+                        <svg class="store-icon"
+                             viewBox="0 0 24 24"
+                             fill="currentColor"
+                             aria-hidden="true">
+
+                            <path d="M16.365 1.43c0 1.14-.42 2.06-1.26 2.78-.9.79-1.98 1.24-3.06 1.15-.12-1.1.43-2.24 1.24-2.97.84-.75 2.14-1.3 3.08-1.36v.4zM20.6 17.02c-.5 1.15-.74 1.66-1.38 2.68-.9 1.43-2.16 3.21-3.73 3.22-1.4.01-1.76-.91-3.65-.9-1.9.01-2.3.92-3.7.9-1.57-.02-2.76-1.62-3.66-3.05-2.51-3.98-2.78-8.65-1.23-11.13.98-1.6 2.66-2.65 4.54-2.65 1.86 0 3.03.9 4.57.9 1.5 0 2.42-.9 4.6-.9 1.66 0 3.42.9 4.66 2.46-4.1 2.25-3.44 8.11 2 8.47z"/>
+
+                        </svg>
+
+                        <span>App&nbsp;Store</span>
+
+                    </a>
+
+
+                    <a href="#cta"
+                       class="store-btn"
+                       aria-label="Get it on Google Play">
+
+                        <svg class="store-icon"
+                             viewBox="0 0 24 24"
+                             fill="currentColor"
+                             aria-hidden="true">
+
+                            <path d="M3.6 2.1c-.35.35-.55.85-.55 1.5v16.8c0 .65.2 1.15.55 1.5l.1.08L13.3 12v-.2L3.7 2.02l-.1.08z"/>
+                            <path d="M16.7 15.5l-3.4-3.4v-.2l3.4-3.4 3.83 2.18c1.1.62 1.1 1.64 0 2.26l-3.83 2.18z"/>
+                            <path d="M13.3 12.1l-9.6 9.7c.37.38 1 .43 1.7.05l11.4-6.48-3.5-3.27z"/>
+                            <path d="M13.3 11.9l3.5-3.27L5.4 2.15c-.7-.4-1.33-.33-1.7.05l9.6 9.7z"/>
+
+                        </svg>
+
+                        <span>Google&nbsp;Play</span>
+
+                    </a>
+
+                </div>
+
+                <p class="coming-soon-text">
+                    Coming soon for iOS and Android.
+                </p>
+
+            </div>
+
+
+            <!-- Hero Illustration -->
+            <div class="hero-image" aria-hidden="true">
+
+                <figure class="dashboard-mockup">
+
+                    <svg class="mockup-illustration"
+                         viewBox="0 0 320 320"
+                         fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+
+                        <circle
+                            cx="160"
+                            cy="160"
+                            r="110"
+                            stroke="var(--brand-yellow)"
+                            stroke-width="3"
+                            stroke-dasharray="6 10"/>
+
+                        <circle
+                            cx="160"
+                            cy="160"
+                            r="110"
+                            stroke="var(--brand-orange)"
+                            stroke-width="6"
+                            stroke-linecap="round"
+                            stroke-dasharray="420 691"
+                            transform="rotate(-90 160 160)"/>
+
+                        <circle
+                            cx="160"
+                            cy="150"
+                            r="52"
+                            fill="var(--card-bg)"
+                            stroke="var(--brand-orange)"
+                            stroke-width="3"/>
+
+                        <path
+                            d="M138 145c0-14 10-24 22-24s22 10 22 24-10 26-22 26-22-12-22-26z"
+                            fill="var(--brand-yellow)"
+                            opacity="0.35"/>
+
+                        <circle
+                            cx="148"
+                            cy="146"
+                            r="5"
+                            fill="var(--text-color)"/>
+
+                        <circle
+                            cx="172"
+                            cy="146"
+                            r="5"
+                            fill="var(--text-color)"/>
+
+                        <path
+                            d="M148 162c4 5 16 5 20 0"
+                            stroke="var(--text-color)"
+                            stroke-width="3"
+                            stroke-linecap="round"/>
+
+                        <rect
+                            x="108"
+                            y="216"
+                            width="104"
+                            height="26"
+                            rx="13"
+                            fill="var(--card-bg)"
+                            stroke="var(--brand-red)"
+                            stroke-width="2"/>
+
+                        <text
+                            x="160"
+                            y="233"
+                            text-anchor="middle"
+                            font-family="Inter, sans-serif"
+                            font-size="12"
+                            font-weight="600"
+                            fill="var(--brand-red)">
+                            Keep Learning
+                        </text>
+
+                    </svg>
+
+                </figure>
+
+            </div>
+
+        </header>
+
+
+        <!-- How It Works -->
+        <section id="how-it-works" class="how-it-works">
+
+            <h2>
+                From Notes to Mastery in 3 Steps
+            </h2>
+
+            <div class="steps-grid">
+
+                <article class="step-card">
+
+                    <div class="step-num" aria-hidden="true">
+                        1
+                    </div>
+
+                    <h3>
+                        Bring Your Material
+                    </h3>
+
+                    <p>
+                        Add your study material and organize the
+                        concepts you want to learn.
+                    </p>
+
+                </article>
+
+
+                <article class="step-card">
+
+                    <div class="step-num" aria-hidden="true">
+                        2
+                    </div>
+
+                    <h3>
+                        Build Your Study Set
+                    </h3>
+
+                    <p>
+                        Turn your material into study sets, flashcards,
+                        and visual concept maps designed to make
+                        difficult topics easier to understand.
+                    </p>
+
+                </article>
+
+
+                <article class="step-card">
+
+                    <div class="step-num" aria-hidden="true">
+                        3
+                    </div>
+
+                    <h3>
+                        Learn &amp; Teach It Back
+                    </h3>
+
+                    <p>
+                        Use Feynman Mode to explain what you've learned,
+                        receive AI feedback, and identify concepts that
+                        need more attention.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Core AI Features -->
+        <section id="features" class="features">
+
+            <h2>
+                Smarter Tools for Deeper Learning
+            </h2>
+
+            <div class="feature-grid">
+
+
+                <!-- Infinite Canvas -->
+                <article class="feature-card">
+
+                    <div class="feature-icon" aria-hidden="true">
+
+                        <svg viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="1.6"
+                             stroke-linecap="round"
+                             stroke-linejoin="round">
+
+                            <circle cx="6" cy="6" r="2.6"/>
+                            <circle cx="18" cy="6" r="2.6"/>
+                            <circle cx="12" cy="17" r="2.6"/>
+
+                            <path d="M8.3 7.3 10 14.6"/>
+                            <path d="M15.7 7.3 14 14.6"/>
+                            <path d="M8.6 6h6.8"/>
+
+                        </svg>
+
+                    </div>
+
+                    <h3>
+                        Infinite Canvas &amp; Study Cards
+                    </h3>
+
+                    <p>
+                        Pinch, zoom, and drag ideas across an interactive
+                        canvas to visually connect concepts. Switch to
+                        traditional study cards when you want quick review.
+                    </p>
+
+                </article>
+
+
+                <!-- Feynman Mode -->
+                <article class="feature-card" id="feynman">
+
+                    <div class="feature-icon" aria-hidden="true">
+
+                        <svg viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="1.6"
+                             stroke-linecap="round"
+                             stroke-linejoin="round">
+
+                            <path
+                                d="M4 5.5h16v10H12.5L8 19v-3.5H4z"/>
+
+                            <path d="M8 9.5h8"/>
+                            <path d="M8 12.5h5"/>
+
+                        </svg>
+
+                    </div>
+
+                    <h3>
+                        Active Study: Feynman Mode
+                    </h3>
+
+                    <p>
+                        Explain concepts through conversational chat or
+                        voice. Your AI learning buddy provides adaptive
+                        feedback to help you find gaps in your understanding.
+                    </p>
+
+                </article>
+
+
+                <!-- Study Plans -->
+                <article class="feature-card">
+
+                    <div class="feature-icon" aria-hidden="true">
+
+                        <svg viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="1.6"
+                             stroke-linecap="round"
+                             stroke-linejoin="round">
+
+                            <rect
+                                x="4"
+                                y="5.5"
+                                width="16"
+                                height="14.5"
+                                rx="2"/>
+
+                            <path d="M4 9.5h16"/>
+                            <path d="M8 3.5v3"/>
+                            <path d="M16 3.5v3"/>
+
+                            <path d="M8 13h2"/>
+                            <path d="M13 13h3"/>
+                            <path d="M8 16.5h2"/>
+                            <path d="M13 16.5h3"/>
+
+                        </svg>
+
+                    </div>
+
+                    <h3>
+                        AI Study Plan Generation
+                    </h3>
+
+                    <p>
+                        Enter a subject and your target deadline.
+                        myLB calculates a manageable daily workload and
+                        creates an interactive timeline to keep your
+                        study sessions organized.
+                    </p>
+
+                </article>
+
+
+                <!-- AI Solve -->
+                <article class="feature-card">
+
+                    <div class="feature-icon" aria-hidden="true">
+
+                        <svg viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="1.6"
+                             stroke-linecap="round"
+                             stroke-linejoin="round">
+
+                            <path
+                                d="M4 8.2a1.5 1.5 0 0 1 1.5-1.5h2l1.1-1.7h6.8l1.1 1.7h2A1.5 1.5 0 0 1 20 8.2v9.3a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 17.5z"/>
+
+                            <circle
+                                cx="12"
+                                cy="12.3"
+                                r="3.6"/>
+
+                        </svg>
+
+                    </div>
+
+                    <h3>
+                        AI Solve
+                    </h3>
+
+                    <p>
+                        Snap a photo of a difficult problem and get
+                        step-by-step help. Connect solutions back to your
+                        study material so you know what concepts to review.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Gamification -->
+        <section id="gamification" class="multiplayer-section">
+
+            <h2>
+                Make Learning a Journey
+            </h2>
+
+            <div class="gamification-grid">
+
+                <div class="text-content">
+
+                    <h3>
+                        Your Focus Pet
+                    </h3>
+
+                    <p>
+                        Adopt your own Focus Pet, give it a name, and
+                        keep it energized by staying consistent with
+                        your learning. Earn XP, grow your pet, and
+                        unlock new stages as you progress.
+                    </p>
+
+
+                    <h3>
+                        Your Trophy Room
+                    </h3>
+
+                    <p>
+                        Celebrate your progress by showcasing your
+                        achievements, evolved Focus Pet, and milestones
+                        inside your personal Trophy Room.
+                    </p>
+
+
+                    <h3>
+                        Progress That Feels Rewarding
+                    </h3>
+
+                    <p>
+                        Build study streaks, earn experience, and collect
+                        Solo Milestone Badges as you continue improving.
+                    </p>
+
+                </div>
+
+
+                <div class="visual-content">
+
+                    <div class="placeholder-trophy-room">
+
+                        <svg viewBox="0 0 280 220"
+                             fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+
+                            <g stroke="var(--brand-red)"
+                               stroke-width="1.4"
+                               opacity="0.9">
+
+                                <rect
+                                    x="20"
+                                    y="20"
+                                    width="26"
+                                    height="26"
+                                    rx="4"/>
+
+                                <rect
+                                    x="54"
+                                    y="20"
+                                    width="26"
+                                    height="26"
+                                    rx="4"
+                                    opacity="0.35"/>
+
+                                <rect
+                                    x="88"
+                                    y="20"
+                                    width="26"
+                                    height="26"
+                                    rx="4"
+                                    opacity="0.7"/>
+
+                                <rect
+                                    x="20"
+                                    y="54"
+                                    width="26"
+                                    height="26"
+                                    rx="4"
+                                    opacity="0.5"/>
+
+                                <rect
+                                    x="54"
+                                    y="54"
+                                    width="26"
+                                    height="26"
+                                    rx="4"/>
+
+                                <rect
+                                    x="88"
+                                    y="54"
+                                    width="26"
+                                    height="26"
+                                    rx="4"
+                                    opacity="0.2"/>
+
+                            </g>
+
+
+                            <path
+                                d="M170 190v-70"
+                                stroke="var(--brand-orange)"
+                                stroke-width="2"/>
+
+                            <path
+                                d="M155 190v-40M185 190v-95M200 190v-25M215 190v-58"
+                                stroke="var(--brand-orange)"
+                                stroke-width="2"
+                                opacity="0.5"/>
+
+                            <circle
+                                cx="170"
+                                cy="115"
+                                r="14"
+                                stroke="var(--brand-red)"
+                                stroke-width="2"/>
+
+                            <path
+                                d="M164 115h12M170 109v12"
+                                stroke="var(--brand-red)"
+                                stroke-width="2"/>
+
+                        </svg>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Multiplayer / Co-op -->
+        <section id="quests" class="features">
+
+            <h2>
+                Learning is Better Together
+            </h2>
+
+            <div class="feature-grid">
+
+                <article class="feature-card">
+
+                    <div class="feature-icon" aria-hidden="true">
+
+                        <svg viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="1.6"
+                             stroke-linecap="round"
+                             stroke-linejoin="round">
+
+                            <circle cx="8" cy="8" r="3"/>
+                            <circle cx="16" cy="8" r="3"/>
+
+                            <path d="M3 19c0-3 2-5 5-5"/>
+                            <path d="M21 19c0-3-2-5-5-5"/>
+
+                            <path d="M8 19c0-3 1.5-5 4-5s4 2 4 5"/>
+
+                        </svg>
+
+                    </div>
+
+                    <h3>
+                        Co-op Quest Board
+                    </h3>
+
+                    <p>
+                        Join the lobby and tackle group learning
+                        challenges together. Everyone contributes toward
+                        a shared goal while your team watches the progress
+                        bar move toward completion.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon" aria-hidden="true">
+
+                        <svg viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="1.6"
+                             stroke-linecap="round"
+                             stroke-linejoin="round">
+
+                            <path d="M4 19V9"/>
+                            <path d="M10 19V5"/>
+                            <path d="M16 19v-7"/>
+                            <path d="M22 19V3"/>
+
+                        </svg>
+
+                    </div>
+
+                    <h3>
+                        Shared Progress
+                    </h3>
+
+                    <p>
+                        See your team's contribution in real time as
+                        everyone works toward completing the challenge.
+                        Work together to earn exclusive Group Relics.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon" aria-hidden="true">
+
+                        <svg viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="1.6"
+                             stroke-linecap="round"
+                             stroke-linejoin="round">
+
+                            <path
+                                d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9 5.5-.8z"/>
+
+                        </svg>
+
+                    </div>
+
+                    <h3>
+                        Group Relics
+                    </h3>
+
+                    <p>
+                        Complete co-op challenges with your team and
+                        unlock special Group Relics that represent
+                        achievements you've earned together.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Analytics -->
+        <section id="analytics" class="how-it-works">
+
+            <h2>
+                See Your Learning Progress
+            </h2>
+
+            <div class="steps-grid">
+
+                <article class="step-card">
+
+                    <div class="step-num" aria-hidden="true">
+                        1
+                    </div>
+
+                    <h3>
+                        Track Your Strengths
+                    </h3>
+
+                    <p>
+                        Use visual analytics to understand where you're
+                        performing well and which areas deserve more study.
+                    </p>
+
+                </article>
+
+
+                <article class="step-card">
+
+                    <div class="step-num" aria-hidden="true">
+                        2
+                    </div>
+
+                    <h3>
+                        Visual Heatmaps
+                    </h3>
+
+                    <p>
+                        Get a clearer picture of your learning activity
+                        with visual progress and performance heatmaps.
+                    </p>
+
+                </article>
+
+
+                <article class="step-card">
+
+                    <div class="step-num" aria-hidden="true">
+                        3
+                    </div>
+
+                    <h3>
+                        Earn Milestones
+                    </h3>
+
+                    <p>
+                        Turn consistent effort into achievements with
+                        Solo Milestone Badges that celebrate your progress.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Final CTA -->
+        <section id="cta" class="cta-section">
+
+            <h2>
+                Ready to Evolve the Way You Learn?
+            </h2>
+
+            <p>
+                myLB brings AI-powered study tools, active learning,
+                gamification, and collaboration together in one place.
+            </p>
+
+            <div class="app-store-buttons center-buttons">
+
+                <a href="#"
+                   class="store-btn dark"
+                   aria-label="Download on the App Store">
+
+                    <svg class="store-icon"
+                         viewBox="0 0 24 24"
+                         fill="currentColor"
+                         aria-hidden="true">
+
+                        <path d="M16.365 1.43c0 1.14-.42 2.06-1.26 2.78-.9.79-1.98 1.24-3.06 1.15-.12-1.1.43-2.24 1.24-2.97.84-.75 2.14-1.3 3.08-1.36v.4zM20.6 17.02c-.5 1.15-.74 1.66-1.38 2.68-.9 1.43-2.16 3.21-3.73 3.22-1.4.01-1.76-.91-3.65-.9-1.9.01-2.3.92-3.7.9-1.57-.02-2.76-1.62-3.66-3.05-2.51-3.98-2.78-8.65-1.23-11.13.98-1.6 2.66-2.65 4.54-2.65 1.86 0 3.03.9 4.57.9 1.5 0 2.42-.9 4.6-.9 1.66 0 3.42.9 4.66 2.46-4.1 2.25-3.44 8.11 2 8.47z"/>
+
+                    </svg>
+
+                    <span>App&nbsp;Store</span>
+
+                </a>
+
+
+                <a href="#"
+                   class="store-btn dark"
+                   aria-label="Get it on Google Play">
+
+                    <svg class="store-icon"
+                         viewBox="0 0 24 24"
+                         fill="currentColor"
+                         aria-hidden="true">
+
+                        <path d="M3.6 2.1c-.35.35-.55.85-.55 1.5v16.8c0 .65.2 1.15.55 1.5l.1.08L13.3 12v-.2L3.7 2.02l-.1.08z"/>
+                        <path d="M16.7 15.5l-3.4-3.4v-.2l3.4-3.4 3.83 2.18c1.1.62 1.1 1.64 0 2.26l-3.83 2.18z"/>
+                        <path d="M13.3 12.1l-9.6 9.7c.37.38 1 .43 1.7.05l11.4-6.48-3.5-3.27z"/>
+                        <path d="M13.3 11.9l3.5-3.27L5.4 2.15c-.7-.4-1.33-.33-1.7.05l9.6 9.7z"/>
+
+                    </svg>
+
+                    <span>Google&nbsp;Play</span>
+
+                </a>
+
+            </div>
+
+            <p class="coming-soon-text">
+                Coming soon for iOS and Android.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <div class="footer-content">
+
+            <div class="brand">
+                myLB
+            </div>
+
+            <div class="footer-links">
+
+               <a href="privacy-policy.html">Privacy Policy</a>
+<a href="terms.html">Terms of Service</a>
+<a href="mailto:mylearningb@gmail.com">Contact Support</a>
+
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            &copy; 2026 My Learning Buddy. All rights reserved.
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
