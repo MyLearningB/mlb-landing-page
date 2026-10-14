@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Request account deletion for MyLB (My Learning Buddy).">
+
+    <meta name="theme-color" content="#EF5B25">
+
+    <title>MyLB | Delete Account</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* --- Delete Account Page --- */
+        .page-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 80px 5% 100px;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+
+        .page-header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .content-card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--brand-orange);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            color: var(--brand-red);
+        }
+
+        /* Form Styles */
+        .delete-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .input-group label {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--text-color);
+        }
+
+        .input-group input {
+            padding: 14px 18px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: border-color 0.2s;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: var(--brand-orange);
+        }
+
+        .submit-btn {
+            background-color: var(--brand-red);
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background-color: #d12e2e;
+        }
+
+        .important-notice {
+            background: #FFF5F2;
+            border-left: 4px solid var(--brand-orange);
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+        }
+
+        .important-notice p {
+            margin: 0;
+            color: var(--text-color);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .success-message {
+            display: none;
+            background: #E8F5E9;
+            border-left: 4px solid #4CAF50;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .success-message p {
+            margin: 0;
+            color: #2E7D32;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .page-container {
+                padding: 50px 5% 70px;
+            }
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            .content-card {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="logo" aria-label="MyLB Home">
+            <img src="assets/logo.svg" alt="MyLB Logo" width="25%">
+        </a>
+        <div class="nav-links">
+            <a href="index.html#how-it-works">How It Works</a>
+            <a href="index.html#features">Features</a>
+            <a href="privacy-policy.html">Privacy</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="page-container">
+
+            <a href="index.html" class="back-link">
+                ← Back to MyLB
+            </a>
+
+            <header class="page-header">
+                <h1>Delete Account</h1>
+                <p>Submit a request to permanently delete your MyLB account and all associated data.</p>
+            </header>
+
+            <div class="content-card">
+                
+                <div class="important-notice">
+                    <p><strong>Warning:</strong> Deleting your account is permanent. All your study sets, flashcards, Focus Pet progress, and statistics will be permanently removed within 30 days. This action cannot be undone.</p>
+                </div>
+
+                <!-- Delete Request Form -->
+                <form id="deleteAccountForm" class="delete-form">
+                    <div class="input-group">
+                        <label for="email">Account Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Request Account Deletion</button>
+                </form>
+
+                <!-- Success Message (Hidden by default) -->
+                <div id="successState" class="success-message">
+                    <p>✓ Request received. If an account is associated with that email, we will process the deletion within 30 days. We may contact you to verify your identity.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="brand">
+                MyLB
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 My Learning Buddy. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Script to handle the form visually -->
+    <!-- Script to send the request securely to your email -->
+    <script>
+        document.getElementById('deleteAccountForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent page reload
+            
+            const emailInput = document.getElementById('email').value;
+            const submitBtn = document.querySelector('.submit-btn');
+            
+            // Change button text to show loading
+            submitBtn.innerText = "Sending Request...";
+            submitBtn.disabled = true;
+
+            // Send the email to mylearningb@gmail.com via FormSubmit AJAX API
+            fetch("https://formsubmit.co/ajax/mylearningb@gmail.com", {
+                method: "POST",
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    _subject: "URGENT: MyLB Account Deletion Request",
+                    email: emailInput,
+                    message: "A user has requested account deletion from the MyLB landing page."
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Hide the form and show the success message
+                document.getElementById('deleteAccountForm').style.display = 'none';
+                document.getElementById('successState').style.display = 'block';
+            })
+            .catch(error => {
+                console.log(error);
+                submitBtn.innerText = "Request Failed. Try Again.";
+                submitBtn.disabled = false;
+                alert("Something went wrong. Please email mylearningb@gmail.com directly.");
+            });
+        });
+    </script>
+
+</body>
+</html>
